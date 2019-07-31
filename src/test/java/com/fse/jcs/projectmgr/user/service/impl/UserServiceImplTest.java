@@ -1,4 +1,4 @@
-package com.fse.jcs.projectmgr.user.service;
+package com.fse.jcs.projectmgr.user.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +18,7 @@ import com.fse.jcs.projectmgr.user.dao.UserDao;
 import com.fse.jcs.projectmgr.user.dao.impl.UserDaoImpl;
 import com.fse.jcs.projectmgr.user.model.User;
 import com.fse.jcs.projectmgr.user.repository.UserRepository;
+import com.fse.jcs.projectmgr.user.service.UserService;
 import com.fse.jcs.projectmgr.user.service.impl.UserServiceImpl;
 
 import static org.junit.Assert.assertEquals;
@@ -26,10 +27,10 @@ import static org.mockito.Mockito.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes= {UserServiceImpl.class, UserDaoImpl.class})
-public class UserServiceTest {
+public class UserServiceImplTest {
 	
 	@Autowired
-	UserService userService;
+	UserServiceImpl userService;
 	
 	@MockBean
 	UserRepository mockUserRepository;
